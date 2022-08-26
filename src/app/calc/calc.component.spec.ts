@@ -24,4 +24,12 @@ describe('CalcComponent', () => {
     let calc = 2 + 3;
     expect(calc).toBe(5);
   });
+
+  it('should set message to on', () => {
+    const component = new CalcComponent();
+    // Before call the method
+    expect(component.message).toMatch('Off');
+    component.onClick();
+    expect(component.message).toMatch('On');
+  });
 });
